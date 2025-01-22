@@ -90,7 +90,7 @@ export default function Navbar(props: Props) {
               display: { xs: 'none', sm: 'block' },
             }}
           >
-            Lucas.
+            Lucas
           </Typography>
           <Box
             sx={{ display: { xs: 'none', sm: 'block' } }}
