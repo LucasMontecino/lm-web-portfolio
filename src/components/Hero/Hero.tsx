@@ -11,6 +11,7 @@ export default function Hero() {
     <>
       <CssBaseline />
       <Container
+        id="hero"
         sx={{
           mt: '100px',
           display: 'flex',
