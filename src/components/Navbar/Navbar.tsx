@@ -22,12 +22,19 @@ interface Props {
   window?: () => Window;
 }
 
+interface Navbar {
+  id: number;
+  name: string;
+  href: string;
+}
+
 const drawerWidth = 240;
-const navbarList = [
-  { id: 1, name: 'Work', href: '/work' },
-  { id: 2, name: 'About', href: '/about' },
-  { id: 3, name: 'Resume', href: '/resume' },
-  { id: 4, name: 'Contact', href: '/contact' },
+const navbarList: Navbar[] = [
+  { id: 1, name: 'Hero', href: '#hero' },
+  { id: 2, name: 'Work', href: '#work' },
+  { id: 3, name: 'About', href: '#about' },
+  { id: 4, name: 'Resume', href: '#resume' },
+  { id: 5, name: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar(props: Props) {
