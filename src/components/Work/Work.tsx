@@ -66,12 +66,7 @@ const workList: WorkList[] = [
 
 export default function Work() {
   return (
-    <Box
-      sx={{
-        maxWidth: '990px',
-        margin: '0 auto',
-      }}
-    >
+    <Box sx={{ mt: '20px' }}>
       <List
         sx={{
           display: 'flex',
