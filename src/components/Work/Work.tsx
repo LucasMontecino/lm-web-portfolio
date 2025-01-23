@@ -3,6 +3,7 @@ import {
   Card,
   CardContent,
   CardMedia,
+  Divider,
   List,
   Typography,
 } from '@mui/material';
@@ -67,6 +68,13 @@ const workList: WorkList[] = [
 export default function Work() {
   return (
     <Box sx={{ mt: '20px' }}>
+      <Divider />
+      <Typography
+        variant="h3"
+        sx={{ textAlign: 'center', py: '20px' }}
+      >
+        My Most Recently Work
+      </Typography>
       <List
         sx={{
           display: 'flex',
