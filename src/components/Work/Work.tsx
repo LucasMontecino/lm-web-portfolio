@@ -71,13 +71,20 @@ export default function Work() {
       <Divider />
       <Typography
         variant="h3"
-        sx={{ textAlign: 'center', py: '20px' }}
+        sx={{
+          textAlign: 'center',
+          py: '20px',
+          fontSize: { xs: '24px', md: '48px' },
+        }}
       >
         My Most Recently Work
       </Typography>
       <List
         sx={{
           display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          gap: '24px',
         }}
       >
         {workList.map((item) => (
@@ -85,6 +92,9 @@ export default function Work() {
             key={item.id}
             sx={{
               maxWidth: 345,
+              border: '5px solid #000',
+              borderRadius: '20px 0 20px 0',
+              padding: '5px',
             }}
           >
             <CardContent>
