@@ -35,10 +35,31 @@ export default function Hero() {
           />
         </Box>
         <Box>
-          <Typography variant="h1">
+          <Typography
+            variant="h1"
+            sx={{
+              textAlign: 'center',
+              mb: '10px',
+              fontSize: {
+                xs: '32px',
+                sm: '36px',
+                md: '80px',
+              },
+            }}
+          >
             I&apos;m Lucas Montecino.
           </Typography>
-          <Typography variant="h2">
+          <Typography
+            variant="h2"
+            sx={{
+              textAlign: 'center',
+              fontSize: {
+                xs: '26px',
+                sm: '30px',
+                md: '56px',
+              },
+            }}
+          >
             A passionate Frontend Developer
           </Typography>
         </Box>
