@@ -12,15 +12,10 @@ import {
   ListItemButton,
   ListItemText,
   Toolbar,
-  Typography,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
-import { useState } from 'react';
-
-interface Props {
-  window?: () => Window;
-}
+import { useEffect, useState } from 'react';
 
 interface Navbar {
   id: number;
@@ -32,14 +27,15 @@ const drawerWidth = 240;
 const navbarList: Navbar[] = [
   { id: 1, name: 'Hero', href: '#hero' },
   { id: 2, name: 'Work', href: '#work' },
-  { id: 3, name: 'About', href: '#about' },
+  { id: 3, name: 'Tech Stack', href: '#tech-stack' },
   { id: 4, name: 'Resume', href: '#resume' },
   { id: 5, name: 'Contact', href: '#contact' },
 ];
 
-export default function Navbar(props: Props) {
-  const { window } = props;
+export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -50,35 +46,61 @@ export default function Navbar(props: Props) {
       onClick={handleDrawerToggle}
       sx={{ textAlign: 'center' }}
     >
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Lucas.
-      </Typography>
       <Divider />
       <List>
         {navbarList.map((item) => (
           <ListItem key={item.id} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText
-                primary={
-                  <Link href={item.href}>{item.name}</Link>
-                }
-              />
-            </ListItemButton>
+            <Link href={item.href} passHref legacyBehavior>
+              <ListItemButton sx={{ textAlign: 'center' }}>
+                <ListItemText primary={item.name} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
     </Box>
   );
 
-  const container =
-    window !== undefined
-      ? () => window().document.body
-      : undefined;
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      // Determine scroll direction
+      if (currentScrollPos > prevScrollPos && visible) {
+        // Scrolling down
+        setVisible(false);
+      } else if (
+        currentScrollPos < prevScrollPos &&
+        !visible
+      ) {
+        // Scrolling up
+        setVisible(true);
+      }
+
+      // Update previous scroll position
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup
+    return () =>
+      window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos, visible]);
 
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar
+        component="nav"
+        sx={{
+          transition: 'transform 0.3s ease-in-out',
+          transform: visible
+            ? 'translateY(0)'
+            : 'translateY(-100%)',
+        }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -89,30 +111,27 @@ export default function Navbar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              display: { xs: 'none', sm: 'block' },
-            }}
-          >
-            Lucas
-          </Typography>
+
           <Box
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
             {navbarList.map((item) => (
-              <Button key={item.id} sx={{ color: '#fff' }}>
-                <Link href={item.href}>{item.name}</Link>
-              </Button>
+              <Link
+                href={item.href}
+                key={item.id}
+                passHref
+                legacyBehavior
+              >
+                <Button sx={{ color: '#fff' }}>
+                  {item.name}
+                </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>
       </AppBar>
       <nav>
         <Drawer
-          container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
