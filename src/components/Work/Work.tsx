@@ -2,11 +2,11 @@ import {
   Box,
   Card,
   CardContent,
-  CardMedia,
   Divider,
   List,
   Typography,
 } from '@mui/material';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface WorkLinks {
@@ -67,7 +67,7 @@ const workList: WorkList[] = [
 
 export default function Work() {
   return (
-    <Box sx={{ mt: '20px' }}>
+    <Box sx={{ mt: 8 }} id={'work'}>
       <Divider />
       <Typography
         variant="h3"
@@ -95,6 +95,10 @@ export default function Work() {
               border: '5px solid #000',
               borderRadius: '20px 0 20px 0',
               padding: '5px',
+              transition: 'transform .3s ease-in-out',
+              '&:hover': {
+                transform: 'scale(1.05)',
+              },
             }}
           >
             <CardContent>
@@ -106,16 +110,20 @@ export default function Work() {
               >
                 {item.projectName}
               </Typography>
+              <Typography variant="body1" sx={{ mb: 2 }}>
+                {item.description}
+              </Typography>
               <Link
                 href={item.links.project}
                 target="blank"
               >
-                <CardMedia
-                  component={'img'}
+                <Image
                   height={300}
-                  image={item.images[0]}
+                  width={300}
+                  src={item.images[0]}
                   alt={item.projectName + ' img'}
                   title={item.projectName}
+                  priority={item.id === 1}
                 />
               </Link>
             </CardContent>
