@@ -4,7 +4,7 @@ import { Box, Button, Typography } from '@mui/material';
 export default function Resume() {
   const handleDownloadResume = () => {
     const resumeUrl =
-      'https://drive.google.com/file/d/1KAzjC10qTSaSR8FE58cQGN4rpQeDxZOU/view?usp=drive_link';
+      'https://res.cloudinary.com/ds1jj2ef8/image/upload/fl_attachment/v1738282707/Lucas_Montecino_s_Resume_-_2025_lczzny.pdf';
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.target = '_blank';
