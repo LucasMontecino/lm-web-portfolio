@@ -7,10 +7,36 @@ export default function ContactMe() {
     const subject = 'Contact from Portfolio';
     const body =
       'Hello Lucas, I came across your portfolio and wanted to get in touch...';
-    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(
+    // Gmail deep link for mobile
+    const gmailDeepLink = `googlegmail:///co?to=${email}&subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoUrl;
+
+    // Gmail web URL for desktop
+    const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    // Check if the user is on a mobile device
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+
+    if (isMobile) {
+      // Try to open the Gmail app
+      window.location.href = gmailDeepLink;
+
+      // Fallback to Gmail web if the app is not installed
+      setTimeout(() => {
+        if (!document.hidden) {
+          window.open(gmailWebUrl, '_blank');
+        }
+      }, 500); // Wait 500ms before falling back
+    } else {
+      // Open Gmail web for desktop users
+      window.open(gmailWebUrl, '_blank');
+    }
   };
 
   return (
