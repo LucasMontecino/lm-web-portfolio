@@ -3,8 +3,7 @@ import { Box, Button, Typography } from '@mui/material';
 
 export default function Resume() {
   const handleDownloadResume = () => {
-    const resumeUrl =
-      'https://res.cloudinary.com/ds1jj2ef8/image/upload/fl_attachment/v1738282707/Lucas_Montecino_s_Resume_-_2025_lczzny.pdf';
+    const resumeUrl = '/LM-Resume-2025.pdf';
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.target = '_blank';
