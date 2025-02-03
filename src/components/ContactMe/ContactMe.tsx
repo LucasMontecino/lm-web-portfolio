@@ -7,15 +7,25 @@ export default function ContactMe() {
     const subject = 'Contact from Portfolio';
     const body =
       'Hello Lucas, I came across your portfolio and wanted to get in touch...';
+
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+
     // Gmail deep link for mobile
-    const gmailDeepLink = `googlegmail:///co?to=${email}&subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+    // const gmailDeepLink = `googlegmail:///co?to=${email}&subject=${encodeURIComponent(
+    //   subject
+    // )}&body=${encodeURIComponent(body)}`;
 
     // Gmail web URL for desktop
-    const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+    // const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+    //   subject
+    // )}&body=${encodeURIComponent(body)}`;
+
+    // Mailto link (default email client)
+    const mailtoLink = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
+
+    // Gmail web URL (for users who prefer using Gmail in the browser)
+    const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodedSubject}&body=${encodedBody}`;
 
     // Check if the user is on a mobile device
     const isMobile =
@@ -25,7 +35,7 @@ export default function ContactMe() {
 
     if (isMobile) {
       // Try to open the Gmail app
-      window.location.href = gmailDeepLink;
+      window.location.href = mailtoLink;
 
       // Fallback to Gmail web if the app is not installed
       setTimeout(() => {
@@ -34,8 +44,8 @@ export default function ContactMe() {
         }
       }, 500); // Wait 500ms before falling back
     } else {
-      // Open Gmail web for desktop users
-      window.open(gmailWebUrl, '_blank');
+      // Open the default mail client on desktop
+      window.location.href = mailtoLink;
     }
   };
 
