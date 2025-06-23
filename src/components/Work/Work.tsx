@@ -28,7 +28,7 @@ const workList: WorkList[] = [
     projectName: 'Shoes Shop',
     description: '',
     images: [
-      'https://res.cloudinary.com/ds1jj2ef8/image/upload/v1737579377/Captura_de_pantalla_2025-01-22_175536_e0mkih.png',
+      'https://res.cloudinary.com/ds1jj2ef8/image/upload/v1742237005/solvd-ecommerce-screenshot_sirxts.png',
     ],
     links: {
       github:
@@ -42,7 +42,7 @@ const workList: WorkList[] = [
     projectName: 'Food Api',
     description: '',
     images: [
-      'https://res.cloudinary.com/ds1jj2ef8/image/upload/v1737580530/Captura_de_pantalla_2024-02-21_181733_rkkrht.png',
+      'https://res.cloudinary.com/ds1jj2ef8/image/upload/v1742237155/food-api-screen_qu4pxz.png',
     ],
     links: {
       github: 'https://github.com/LucasMontecino/Food-Api',
@@ -51,10 +51,22 @@ const workList: WorkList[] = [
   },
   {
     id: 3,
+    projectName: 'Dogs Api',
+    description: '',
+    images: [
+      'https://res.cloudinary.com/ds1jj2ef8/image/upload/v1750718656/dogs-api_pn4egd.png',
+    ],
+    links: {
+      github: 'https://github.com/LucasMontecino/Dogs-Api',
+      project: 'https://dogs-api-lilac.vercel.app/',
+    },
+  },
+  {
+    id: 4,
     projectName: 'To Do App',
     description: '',
     images: [
-      'https://res.cloudinary.com/ds1jj2ef8/image/upload/v1737581034/Captura_de_pantalla_2025-01-22_182341_metx6y.png',
+      'https://res.cloudinary.com/ds1jj2ef8/image/upload/v1750718383/todo-app_uirr0p.png',
     ],
     links: {
       github:
@@ -87,13 +99,13 @@ export default function Work() {
           gap: '24px',
         }}
       >
-        {workList.map((item) => (
+        {workList.slice(0, 3).map((item) => (
           <Card
             key={item.id}
             sx={{
               maxWidth: 345,
               border: '5px solid #000',
-              borderRadius: '20px 0 20px 0',
+              borderRadius: 6,
               padding: '5px',
               transition: 'transform .3s ease-in-out',
               '&:hover': {
@@ -124,6 +136,12 @@ export default function Work() {
                   alt={item.projectName + ' img'}
                   title={item.projectName}
                   priority={item.id === 1}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'contain',
+                    borderRadius: 6,
+                  }}
                 />
               </Link>
             </CardContent>
