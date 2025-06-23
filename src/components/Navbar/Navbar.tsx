@@ -95,6 +95,7 @@ export default function Navbar() {
       <AppBar
         component="nav"
         sx={{
+          backgroundColor: '#2c3e50',
           transition: 'transform 0.3s ease-in-out',
           transform: visible
             ? 'translateY(0)'
