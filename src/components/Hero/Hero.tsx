@@ -37,6 +37,7 @@ export default function Hero() {
               padding: '12px',
               border: '3px solid #f7dc6f',
               boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+              objectFit: 'cover',
             }}
           />
         </Box>
