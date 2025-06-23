@@ -3,7 +3,7 @@ import { Box, Button, Typography } from '@mui/material';
 
 export default function Resume() {
   const handleDownloadResume = () => {
-    const resumeUrl = '/LM-Resume-2025.pdf';
+    const resumeUrl = '/LucasMontecino_Resume_2025.pdf';
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.target = '_blank';
