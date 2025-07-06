@@ -16,12 +16,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-
-interface Navbar {
-  id: number;
-  name: string;
-  href: string;
-}
+import type { Navbar } from '@/types';
 
 const drawerWidth = 240;
 const navbarList: Navbar[] = [
@@ -42,10 +37,7 @@ export default function Navbar() {
   };
 
   const drawer = (
-    <Box
-      onClick={handleDrawerToggle}
-      sx={{ textAlign: 'center' }}
-    >
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Divider />
       <List>
         {navbarList.map((item) => (
@@ -69,10 +61,7 @@ export default function Navbar() {
       if (currentScrollPos > prevScrollPos && visible) {
         // Scrolling down
         setVisible(false);
-      } else if (
-        currentScrollPos < prevScrollPos &&
-        !visible
-      ) {
+      } else if (currentScrollPos < prevScrollPos && !visible) {
         // Scrolling up
         setVisible(true);
       }
@@ -85,8 +74,7 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
 
     // Cleanup
-    return () =>
-      window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos, visible]);
 
   return (
@@ -97,9 +85,7 @@ export default function Navbar() {
         sx={{
           backgroundColor: '#2c3e50',
           transition: 'transform 0.3s ease-in-out',
-          transform: visible
-            ? 'translateY(0)'
-            : 'translateY(-100%)',
+          transform: visible ? 'translateY(0)' : 'translateY(-100%)',
         }}
       >
         <Toolbar>
@@ -113,19 +99,10 @@ export default function Navbar() {
             <MenuIcon />
           </IconButton>
 
-          <Box
-            sx={{ display: { xs: 'none', sm: 'block' } }}
-          >
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navbarList.map((item) => (
-              <Link
-                href={item.href}
-                key={item.id}
-                passHref
-                legacyBehavior
-              >
-                <Button sx={{ color: '#fff' }}>
-                  {item.name}
-                </Button>
+              <Link href={item.href} key={item.id} passHref legacyBehavior>
+                <Button sx={{ color: '#fff' }}>{item.name}</Button>
               </Link>
             ))}
           </Box>
