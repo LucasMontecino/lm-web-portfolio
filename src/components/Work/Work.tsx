@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Card,
   CardContent,
   Divider,
@@ -7,9 +8,10 @@ import {
   Typography,
 } from '@mui/material';
 import Image from 'next/image';
-import Link from 'next/link';
 import work from '@/data/work.json';
 import type { WorkList } from '@/types';
+import { FaGithub } from 'react-icons/fa';
+import LanguageIcon from '@mui/icons-material/Language';
 
 const workList: WorkList[] = work;
 
@@ -23,6 +25,7 @@ export default function Work() {
           textAlign: 'center',
           py: '20px',
           fontSize: { xs: '24px', md: '48px' },
+          color: '#2c3e50 ',
         }}
       >
         My Most Recently Work
@@ -40,28 +43,72 @@ export default function Work() {
             key={item.id}
             sx={{
               maxWidth: 345,
-              border: '5px solid #000',
+              border: '5px solid #2c3e50',
               borderRadius: 6,
-              padding: '5px',
               transition: 'transform .3s ease-in-out',
               '&:hover': {
                 transform: 'scale(1.05)',
               },
             }}
           >
-            <CardContent>
-              <Typography
-                variant="h5"
-                gutterBottom
-                component={'div'}
-                sx={{ textAlign: 'center' }}
-              >
-                {item.projectName}
-              </Typography>
-              <Typography variant="body1" sx={{ mb: 2 }}>
-                {item.description}
-              </Typography>
-              <Link href={item.links.project} target="blank">
+            <CardContent
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 2,
+              }}
+            >
+              <Box sx={{ position: 'relative', width: '100%' }}>
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    bgcolor: 'rgba(0, 0, 0, 0.6)',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: 2,
+                    transition: 'opacity .3s ease-in-out',
+                    borderRadius: 2,
+                    zIndex: 2,
+                    opacity: 0,
+                    '&:hover': { opacity: 1 },
+                  }}
+                >
+                  <Button
+                    variant="contained"
+                    sx={{
+                      bgcolor: '#3e5870',
+                      ':hover': {
+                        bgcolor: '#2c3e50',
+                      },
+                    }}
+                    href={item.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    size="small"
+                  >
+                    <FaGithub size={24} />
+                  </Button>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      bgcolor: '#3e5870',
+                      ':hover': {
+                        bgcolor: '#2c3e50',
+                      },
+                    }}
+                    href={item.links.project}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    size="small"
+                  >
+                    <LanguageIcon style={{ fontSize: 24 }} />
+                  </Button>
+                </Box>
                 <Image
                   height={300}
                   width={300}
@@ -74,9 +121,23 @@ export default function Work() {
                     height: 'auto',
                     objectFit: 'contain',
                     borderRadius: 6,
+                    display: 'block',
                   }}
                 />
-              </Link>
+              </Box>
+              <Box>
+                <Typography
+                  variant="h5"
+                  gutterBottom
+                  component={'div'}
+                  sx={{ textAlign: 'left', color: '#2c3e50' }}
+                >
+                  {item.projectName}
+                </Typography>
+                <Typography variant="body1" sx={{ mb: 2, textAlign: 'left' }}>
+                  {item.description}
+                </Typography>
+              </Box>
             </CardContent>
           </Card>
         ))}

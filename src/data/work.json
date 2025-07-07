@@ -2,7 +2,7 @@
     {
         "id": 1,
         "projectName": "Shoes Shop",
-        "description": "",
+        "description": "Modern e-commerce built with React/Next + TypeScript. Browse, filter, and shop shoes with ease.",
         "images": [
             "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1742237005/solvd-ecommerce-screenshot_sirxts.png"
         ],
@@ -14,7 +14,7 @@
     {
         "id": 2,
         "projectName": "Food Api",
-        "description": "",
+        "description": "Full-stack app to search, create, and filter recipes made with React/Redux and CSS Modules, Node + Express, and PostgreSQL.",
         "images": [
             "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1742237155/food-api-screen_qu4pxz.png"
         ],
@@ -26,7 +26,7 @@
     {
         "id": 3,
         "projectName": "Dogs Api",
-        "description": "",
+        "description": "Single-page app for browsing, filtering, and adding dog breeds using external and local data, made with React/Redux and CSS Modules, Node + Express, and PostgreSQL.",
         "images": [
             "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1750718656/dogs-api_pn4egd.png"
         ],

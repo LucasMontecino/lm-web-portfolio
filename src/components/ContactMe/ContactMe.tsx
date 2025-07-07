@@ -51,12 +51,11 @@ export default function ContactMe() {
 
   return (
     <Box id="contact" sx={{ my: 8, textAlign: 'center' }}>
-      <Typography variant="h3" sx={{ mb: 4 }}>
+      <Typography variant="h3" sx={{ mb: 4, color: '#2c3e50' }}>
         Contact Me
       </Typography>
       <Typography variant="body1" sx={{ mb: 4 }}>
-        Have a question or want to work together? Feel free
-        to reach out!
+        Have a question or want to work together? Feel free to reach out!
       </Typography>
       <Button
         variant="contained"
@@ -64,7 +63,7 @@ export default function ContactMe() {
         onClick={handleContactClick}
         sx={{
           backgroundColor: '#f7dc6f',
-          color: '#000',
+          color: '#2c3e50',
           '&:hover': {
             backgroundColor: '#f1c40f',
           },

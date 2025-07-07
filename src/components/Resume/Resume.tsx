@@ -15,12 +15,12 @@ export default function Resume() {
 
   return (
     <Box id="resume" sx={{ my: 8, textAlign: 'center' }}>
-      <Typography variant="h3" sx={{ mb: 4 }}>
+      <Typography variant="h3" sx={{ mb: 4, color: '#2c3e50' }}>
         My Resume
       </Typography>
       <Typography variant="body1" sx={{ mb: 4 }}>
-        Feel free to download my resume to learn more about
-        my skills and experience.
+        Feel free to download my resume to learn more about my skills and
+        experience.
       </Typography>
       <Button
         variant="contained"
@@ -28,7 +28,7 @@ export default function Resume() {
         onClick={handleDownloadResume}
         sx={{
           backgroundColor: '#f7dc6f',
-          color: '#000',
+          color: '#2c3e50',
           '&:hover': {
             backgroundColor: '#f1c40f',
           },

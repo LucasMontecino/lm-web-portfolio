@@ -5,7 +5,7 @@ import { techStack } from './data';
 export default function TechStack() {
   return (
     <Box sx={{ my: 8 }} id="tech-stack">
-      <Typography variant="h3" align="center" sx={{ mb: 4 }}>
+      <Typography variant="h3" align="center" sx={{ mb: 4, color: '#2c3e50' }}>
         My Tech Stack
       </Typography>
       <Grid2 container spacing={3} justifyContent={'center'}>
