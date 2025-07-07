@@ -16,6 +16,7 @@ export default function Hero() {
           justifyContent: 'center',
           textAlign: 'center',
           background: 'linear-gradient(135deg, #f7dc6f 0%, #f1c40f 100%)',
+          mt: 4,
         }}
       >
         <Box
@@ -50,6 +51,7 @@ export default function Hero() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            gap: 2,
           }}
         >
           <Typography
@@ -94,7 +96,6 @@ export default function Hero() {
                 },
                 color: '#34495e',
                 fontWeight: 'medium',
-                pt: 6,
               }}
             >
               I am a Frontend / Full Stack Developer, currently taking the Solvd
