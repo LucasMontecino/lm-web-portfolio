@@ -18,7 +18,15 @@ export default function Hero() {
           background: 'linear-gradient(135deg, #f7dc6f 0%, #f1c40f 100%)',
         }}
       >
-        <Box>
+        <Box
+          sx={{
+            width: 'fit-content',
+            overflow: 'hidden',
+            borderRadius: '50%',
+            transition: 'transform .3s ease-in-out',
+            '&:hover img': { transform: 'scale(1.05)' },
+          }}
+        >
           <Image
             src={
               'https://res.cloudinary.com/ds1jj2ef8/image/upload/v1737496436/lucas-img_axf58w.png'
@@ -33,6 +41,7 @@ export default function Hero() {
               border: '3px solid #f7dc6f',
               boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
               objectFit: 'cover',
+              transition: 'transform .3s ease-in-out',
             }}
           />
         </Box>
@@ -63,7 +72,7 @@ export default function Hero() {
                 display: 'inline',
                 color: 'primary.contrastText',
                 textShadow: '0 0 10px rgba(255, 255, 255, 0.9)',
-                transition: 'all .2s ease-in-out',
+                transition: 'all .3s ease-in-out',
                 '&:hover': {
                   textShadow: '0 0 10px #000',
                 },
