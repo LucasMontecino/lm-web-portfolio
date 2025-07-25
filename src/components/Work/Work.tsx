@@ -20,7 +20,7 @@ export default function Work() {
     <Box sx={{ mt: 8 }} id={'work'}>
       <Divider />
       <Typography
-        variant="h3"
+        variant='h3'
         sx={{
           textAlign: 'center',
           py: '20px',
@@ -38,7 +38,7 @@ export default function Work() {
           gap: '24px',
         }}
       >
-        {workList.slice(0, 3).map((item) => (
+        {workList.slice(0, 4).map((item) => (
           <Card
             key={item.id}
             sx={{
@@ -79,7 +79,7 @@ export default function Work() {
                   }}
                 >
                   <Button
-                    variant="contained"
+                    variant='contained'
                     sx={{
                       bgcolor: '#3e5870',
                       ':hover': {
@@ -87,14 +87,14 @@ export default function Work() {
                       },
                     }}
                     href={item.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    size="small"
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    size='small'
                   >
                     <FaGithub size={24} />
                   </Button>
                   <Button
-                    variant="contained"
+                    variant='contained'
                     sx={{
                       bgcolor: '#3e5870',
                       ':hover': {
@@ -102,9 +102,9 @@ export default function Work() {
                       },
                     }}
                     href={item.links.project}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    size="small"
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    size='small'
                   >
                     <LanguageIcon style={{ fontSize: 24 }} />
                   </Button>
@@ -115,7 +115,6 @@ export default function Work() {
                   src={item.images[0]}
                   alt={item.projectName + ' img'}
                   title={item.projectName}
-                  priority={item.id === 1}
                   style={{
                     width: '100%',
                     height: 'auto',
@@ -127,14 +126,14 @@ export default function Work() {
               </Box>
               <Box>
                 <Typography
-                  variant="h5"
+                  variant='h5'
                   gutterBottom
                   component={'div'}
                   sx={{ textAlign: 'left', color: '#2c3e50' }}
                 >
                   {item.projectName}
                 </Typography>
-                <Typography variant="body1" sx={{ mb: 2, textAlign: 'left' }}>
+                <Typography variant='body1' sx={{ mb: 2, textAlign: 'left' }}>
                   {item.description}
                 </Typography>
               </Box>

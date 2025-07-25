@@ -36,6 +36,16 @@
         }
     },
     {
+        "id": 33,
+        "projectName": "Blog List App",
+        "description": "A full-stack blog list app with authentication and authorization, created with Node + Express, and MongoDB, React/Redux Toolkit and Mui Materials for styles. Users can register, log in, create, edit, and delete blog posts securely.",
+        "images": ["https://res.cloudinary.com/ds1jj2ef8/image/upload/v1753441470/blog-list-app_eaewnh.png"],
+        "links": {
+            "github": "https://github.com/LucasMontecino/blog-list-app",
+            "project": "https://blog-list-app-9sg4.onrender.com/"
+        }
+    },
+    {
         "id": 4,
         "projectName": "To Do App",
         "description": "",
