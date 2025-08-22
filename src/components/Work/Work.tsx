@@ -38,7 +38,7 @@ export default function Work() {
           gap: '24px',
         }}
       >
-        {workList.slice(0, 4).map((item) => (
+        {workList.slice(0, 5).map((item) => (
           <Card
             key={item.id}
             sx={{

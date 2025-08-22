@@ -1,60 +1,74 @@
 [
-    {
-        "id": 1,
-        "projectName": "Shoes Shop",
-        "description": "Modern e-commerce built with React/Next + TypeScript. Browse, filter, and shop shoes with ease.",
-        "images": [
-            "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1742237005/solvd-ecommerce-screenshot_sirxts.png"
-        ],
-        "links": {
-            "github": "https://github.com/FacuReartes/react-laba-final-project-team-2",
-            "project": "https://react-laba-final-project-team-2.vercel.app/"
-        }
-    },
-    {
-        "id": 2,
-        "projectName": "Food Api",
-        "description": "Full-stack app to search, create, and filter recipes made with React/Redux and CSS Modules, Node + Express, and PostgreSQL.",
-        "images": [
-            "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1742237155/food-api-screen_qu4pxz.png"
-        ],
-        "links": {
-            "github": "https://github.com/LucasMontecino/Food-Api",
-            "project": "https://food-api-iota.vercel.app/"
-        }
-    },
-    {
-        "id": 3,
-        "projectName": "Dogs Api",
-        "description": "Single-page app for browsing, filtering, and adding dog breeds using external and local data, made with React/Redux and CSS Modules, Node + Express, and PostgreSQL.",
-        "images": [
-            "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1750718656/dogs-api_pn4egd.png"
-        ],
-        "links": {
-            "github": "https://github.com/LucasMontecino/Dogs-Api",
-            "project": "https://dogs-api-lilac.vercel.app/"
-        }
-    },
-    {
-        "id": 33,
-        "projectName": "Blog List App",
-        "description": "A full-stack blog list app with authentication and authorization, created with Node + Express, and MongoDB, React/Redux Toolkit and Mui Materials for styles. Users can register, log in, create, edit, and delete blog posts securely.",
-        "images": ["https://res.cloudinary.com/ds1jj2ef8/image/upload/v1753441470/blog-list-app_eaewnh.png"],
-        "links": {
-            "github": "https://github.com/LucasMontecino/blog-list-app",
-            "project": "https://blog-list-app-9sg4.onrender.com/"
-        }
-    },
-    {
-        "id": 4,
-        "projectName": "To Do App",
-        "description": "",
-        "images": [
-            "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1750718383/todo-app_uirr0p.png"
-        ],
-        "links": {
-            "github": "https://github.com/LucasMontecino/solvd-laba-repository/tree/main/homeworks/21-react-api",
-            "project": "https://gleeful-biscotti-f0e30d.netlify.app/"
-        }
+  {
+    "id": 1,
+    "projectName": "Shoes Shop",
+    "description": "Modern e-commerce built with React/Next + TypeScript. Browse, filter, and shop shoes with ease.",
+    "images": [
+      "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1742237005/solvd-ecommerce-screenshot_sirxts.png"
+    ],
+    "links": {
+      "github": "https://github.com/FacuReartes/react-laba-final-project-team-2",
+      "project": "https://react-laba-final-project-team-2.vercel.app/"
     }
+  },
+  {
+    "id": 2,
+    "projectName": "Food Api",
+    "description": "Full-stack app to search, create, and filter recipes made with React/Redux and CSS Modules, Node + Express, and PostgreSQL.",
+    "images": [
+      "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1742237155/food-api-screen_qu4pxz.png"
+    ],
+    "links": {
+      "github": "https://github.com/LucasMontecino/Food-Api",
+      "project": "https://food-api-iota.vercel.app/"
+    }
+  },
+  {
+    "id": 3,
+    "projectName": "Dogs Api",
+    "description": "Single-page app for browsing, filtering, and adding dog breeds using external and local data, made with React/Redux and CSS Modules, Node + Express, and PostgreSQL.",
+    "images": [
+      "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1750718656/dogs-api_pn4egd.png"
+    ],
+    "links": {
+      "github": "https://github.com/LucasMontecino/Dogs-Api",
+      "project": "https://dogs-api-lilac.vercel.app/"
+    }
+  },
+  {
+    "id": 4,
+    "projectName": "Blog List App",
+    "description": "A full-stack blog list app with authentication and authorization, created with Node + Express, and MongoDB, React/Redux Toolkit and Mui Materials for styles. Users can register, log in, create, edit, and delete blog posts securely.",
+    "images": [
+      "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1753441470/blog-list-app_eaewnh.png"
+    ],
+    "links": {
+      "github": "https://github.com/LucasMontecino/blog-list-app",
+      "project": "https://blog-list-app-9sg4.onrender.com/"
+    }
+  },
+  {
+    "id": 5,
+    "projectName": "Dessert Cart",
+    "description": "Front End app, Desserts Cart, based on design specs from Frontend Mentor. Follow responsive design best practices, global cart state management using Reactive API from Vue. User can add, remove, and manage its cart.",
+    "images": [
+      "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1755870049/dessert-cart_tikxoi.png"
+    ],
+    "links": {
+      "github": "https://github.com/LucasMontecino/desserts-cart",
+      "project": "https://desserts-cart-eight.vercel.app/"
+    }
+  },
+  {
+    "id": 6,
+    "projectName": "To Do App",
+    "description": "",
+    "images": [
+      "https://res.cloudinary.com/ds1jj2ef8/image/upload/v1750718383/todo-app_uirr0p.png"
+    ],
+    "links": {
+      "github": "https://github.com/LucasMontecino/solvd-laba-repository/tree/main/homeworks/21-react-api",
+      "project": "https://gleeful-biscotti-f0e30d.netlify.app/"
+    }
+  }
 ]
