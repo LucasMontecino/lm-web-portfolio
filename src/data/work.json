@@ -9,7 +9,15 @@
     "links": {
       "github": "https://github.com/FacuReartes/react-laba-final-project-team-2",
       "project": "https://react-laba-final-project-team-2.vercel.app/"
-    }
+    },
+    "stack": [
+      "html",
+      "css",
+      "typescript",
+      "react-dark",
+      "nextjs-light",
+      "materialui-dark"
+    ]
   },
   {
     "id": 2,
@@ -21,7 +29,18 @@
     "links": {
       "github": "https://github.com/LucasMontecino/Food-Api",
       "project": "https://food-api-iota.vercel.app/"
-    }
+    },
+    "stack": [
+      "html",
+      "css",
+      "javascript",
+      "react-dark",
+      "redux",
+      "nodejs-dark",
+      "expressjs-dark",
+      "postgresql-dark",
+      "sequelize-dark"
+    ]
   },
   {
     "id": 3,
@@ -33,7 +52,18 @@
     "links": {
       "github": "https://github.com/LucasMontecino/Dogs-Api",
       "project": "https://dogs-api-lilac.vercel.app/"
-    }
+    },
+    "stack": [
+      "html",
+      "css",
+      "javascript",
+      "react-dark",
+      "redux",
+      "nodejs-dark",
+      "expressjs-dark",
+      "postgresql-dark",
+      "sequelize-dark"
+    ]
   },
   {
     "id": 4,
@@ -45,7 +75,18 @@
     "links": {
       "github": "https://github.com/LucasMontecino/blog-list-app",
       "project": "https://blog-list-app-9sg4.onrender.com/"
-    }
+    },
+    "stack": [
+      "html",
+      "css",
+      "typescript",
+      "react-dark",
+      "redux",
+      "materialui-dark",
+      "nodejs-dark",
+      "expressjs-dark",
+      "mongodb"
+    ]
   },
   {
     "id": 5,
@@ -57,7 +98,8 @@
     "links": {
       "github": "https://github.com/LucasMontecino/desserts-cart",
       "project": "https://desserts-cart-eight.vercel.app/"
-    }
+    },
+    "stack": ["html", "css", "typescript", "vuejs-dark"]
   },
   {
     "id": 6,
@@ -69,6 +111,7 @@
     "links": {
       "github": "https://github.com/LucasMontecino/solvd-laba-repository/tree/main/homeworks/21-react-api",
       "project": "https://gleeful-biscotti-f0e30d.netlify.app/"
-    }
+    },
+    "stack": ["html", "css", "typescript", "vuejs-dark"]
   }
 ]

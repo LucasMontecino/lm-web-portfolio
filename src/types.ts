@@ -3,12 +3,13 @@ export interface WorkLinks {
   project: string;
 }
 
-export interface WorkList {
+export interface IWorkList {
   id: number;
   projectName: string;
   description: string;
   images: string[];
   links: WorkLinks;
+  stack: string[];
 }
 
 export interface TechStack {
