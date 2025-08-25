@@ -23,3 +23,15 @@ a {
 html {
   scroll-behavior: smooth;
 }
+
+@media (min-width: 800px) {
+  .tech-icon {
+    filter: grayscale(100%);
+    transition: all 250ms ease;
+  }
+
+  .tech-icon:hover {
+    filter: grayscale(0%);
+    transform: scale(110%);
+  }
+}
